@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IoT Device Monitoring Dashboard - Track and manage IoT devices with comprehensive monitoring tools">
+  <meta name="theme-color" content="#0f172a">
+  <title>IoT Device Monitoring Dashboard</title>
+  
+  <!-- Font preloading for faster rendering -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Material Design Icons -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet"></noscript>
+  
+  <!-- Base styles for initial page load -->
+  <style>
+    /* Initial loading styles */
+    body {
+      background: #0f172a;
+      color: #f1f5f9;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      transition: background-color 0.3s ease;
+    }
+    
+    /* Loading spinner */
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .loading-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+    }
+    
+    .loading-spinner {
+      width: 50px;
+      height: 50px;
+      border: 4px solid rgba(59, 130, 246, 0.2);
+      border-radius: 50%;
+      border-top-color: #3b82f6;
+      animation: spin 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+  </style>
+  
+  <!-- Dark theme -->
+  <link rel="stylesheet" href="/dark-theme.css">
+</head>
+<body class="dark-theme">
+  <div id="app">
+    <!-- Loading spinner shown before app loads -->
+    <div class="loading-container">
+      <div class="loading-spinner"></div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
