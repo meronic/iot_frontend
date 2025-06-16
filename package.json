@@ -10,17 +10,18 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "vite-plugin-vuetify": "^2.1.1",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
+    "@mdi/font": "^7.4.47",
     "@vitejs/plugin-vue": "^5.2.3",
+    "axios": "^1.6.2",
+    "chart.js": "^4.4.0",
     "prettier": "3.5.3",
     "vite": "^6.2.4",
     "vite-plugin-vue-devtools": "^7.7.2",
-    "@mdi/font": "^7.4.47",
-    "axios": "^1.6.2",
-    "chart.js": "^4.4.0",
-    "vuetify": "^3.4.3"
+    "vuetify": "^3.8.9"
   }
 }
